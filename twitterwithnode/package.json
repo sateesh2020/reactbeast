@@ -1,0 +1,35 @@
+{
+  "name": "react-beast",
+  "version": "0.0.0",
+  "description": "Isomorphic React Example",
+  "main": "app.js",
+  "scripts": {
+    "watch": "watchify app.js -o public/js/bundle.js -v",
+    "browserify": "browserify app.js | uglifyjs > public/js/bundle.js",
+    "build": "npm run browserify ",
+    "start": "npm run watch & nodemon server.js"
+  },
+  "author": "Satheesh Smart",
+  "license": "MIT",
+  "dependencies": {
+    "express": "latest",
+    "express-handlebars": "latest",
+    "mongoose": "latest",
+    "node-jsx": "latest",
+    "ntwitter": "latest",
+    "react": "latest",
+    "socket.io": "latest"
+  },
+  "devDependencies": {
+    "browserify": "latest",
+    "nodemon": "latest",
+    "reactify": "latest",
+    "uglify-js": "latest",
+    "watchify": "latest"
+  },
+  "browserify": {
+    "transform": [
+      "reactify"
+    ]
+  }
+}
